@@ -10,11 +10,16 @@ guess =  None
 tries = 0
 
 while guess != number:
-    guess = int(input("What is your guess? "))
+    while True:
+        try:
+            guess = int(input("What is your guess? "))
+            break
+        except ValueError:
+            print("Nice try but no. That's not an integer. Try again.")
 
-    while guess > 100 or guess < 1:
+    if guess > 100 or guess < 1:
         print("Did you read? That is not within range. Please try again.")
-        guess = int(input("What is your guess? "))
+        continue
 
     tries += 1
     if guess > number:

@@ -11,6 +11,11 @@ tries = 0
 
 while guess != number:
     guess = int(input("What is your guess? "))
+
+    while guess > 100 or guess < 1:
+        print("Did you read? That is not within range. Please try again.")
+        guess = int(input("What is your guess? "))
+
     tries += 1
     if guess > number:
         print("Your guess is too large. Please try again.")

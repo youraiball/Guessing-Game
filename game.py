@@ -53,9 +53,6 @@ while True:
     elif play_again == "N":
         print(f"Thank you for playing. Your best score is {best_score} tries.")
         break
-    else:
-        print("That's a yes-or-no question. Y or N ?")
-        guess = number
 
 
         
